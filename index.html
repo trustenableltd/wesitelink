@@ -9,19 +9,6 @@
   <h1>Chat Widget Test Page</h1>
   <p>The chat widget should appear in the bottom-right corner.</p>
 
- <script>
-(function() {
-  fetch("https://api.elotive.com/widget/ch_1e6268fa86cc.js", {
-    headers: { "ngrok-skip-browser-warning": "true" }
-  })
-  .then(function(r) { return r.text(); })
-  .then(function(js) {
-    var s = document.createElement("script");
-    s.textContent = js;
-    document.body.appendChild(s);
-  })
-  .catch(function(e) { console.error("Widget load error:", e); });
-})();
-</script>
+  <script src="https://api.elotive.com/widget/ch_1e6268fa86cc.js" defer></script>
 </body>
 </html>
